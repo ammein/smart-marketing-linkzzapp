@@ -29,11 +29,11 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
-    padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family: "Source Sans Pro" , sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -43,9 +43,9 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
+/* ol, ul {
     list-style: none;
-}
+} */
 blockquote, q {
     quotes: none;
 }
@@ -83,20 +83,52 @@ sup{
 
 .clearfix{
     zoom: 1;
-    &:before { content: ''; display: block; }
-    &:after { content: ''; display: table; clear: both; }
 }
 
-.hello{
-    font-family: "Fira Sans" , sans-serif;
+.clearfix::before{
+    content: ''; 
+    display: block;
+}
+
+.clearfix::after{
+    content: ''; 
+    display: table; 
+    clear: both;
+}
+
+.paragraph{
+    font-size: 18px;
+    line-height: calc(18px * 1.33);
 }
 </style>
 
 <!-- Link -->
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
 <body>
-    <p class="hello">
-        HELLO WORLD. This is linkzzapp ! Test second ?
+    <hr>
+        <ul>
+            <li type=bullet>
+                LinkZZapp is a smart management solution for property developers and property management companies to help link
+                management offices with residents.
+            </li>
+            <br>
+            <li>
+                Residents can download the app for free on both iOS and Android to enjoy the convenience of the app features anytime
+                and anywhere.
+            </li>
+        </ul>
+    <hr>
+    <p class="paragraph">
+        Nowadays, it’s easy for us to do a lot of things through our phones.
+        
+        So as easy as it is to buy movie tickets through an app, why not do the same thing when it comes to staying connected
+        in your residential area?
+        
+        That’s the thought process that William Wong went through when deciding his next step after resigning from Fortune 500
+        company, Honeywell.
+        
+        Coming from a background of dealing with security solutions, he knew there was more that could be offered to homeowners
+        instead of just CCTVs, Smart Home and access controls.
     </p>
 </body>
 </html>
